@@ -1,12 +1,13 @@
-const [W, H] = readline().split(' ').map(Number);
-const N = Number(readline());
-let [x, y] = readline().split(' ').map(Number);
+var inputs = readline().split(' ');
+const W = parseInt(inputs[0]);
+const H = parseInt(inputs[1]);
+const N = parseInt(readline());
 
-while (true) {
-    const dir = readline();
+var inputs = readline().split(' ');
+let X0 = parseInt(inputs[0]);
+let Y0 = parseInt(inputs[1]);
 
-    // TODO: narrow the search window using `dir`
-    // TODO: choose the next window inside the window
-
-    console.log(`${x} ${y}`);
-}
+let minX = 0;
+let maxX = W - 1;
+let minY = 0;
+let maxY = H - 1;
