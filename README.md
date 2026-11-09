@@ -75,11 +75,24 @@ tower, a one-row corridor, and a tight budget.
 ## Plan
 
 - [x] project scaffold — puzzle statement, local judge, runner shim
-- [ ] step 1 — read the direction and jump one window towards the target
-- [ ] step 2 — track the remaining search area instead of the whole building
-- [ ] step 3 — bisect the search area every turn
-- [ ] step 4 — handle the exact-row / exact-column cases
-- [ ] step 5 — validate on all five scenarios
+- [x] step 1 — read the direction and set the search bounding box
+- [x] step 2 — narrow the box from each direction, every turn
+- [x] step 3 — bisect the box and jump to its midpoint
+- [ ] step 4 — collapse the box when the target shares a row/column
+- [x] step 5 — validate on all five scenarios
+
+## Results
+
+| scenario | games | wins | worst case | budget |
+|:---------|------:|-----:|-----------:|-------:|
+| 10 × 10 | 200 | 200 | 4 | 6 |
+| 10000 × 10000 | 200 | 200 | 14 | 100 |
+| 1 × 10000 tower | 100 | 100 | 14 | 100 |
+| 10000 × 1 corridor | 100 | 100 | 14 | 100 |
+| 100 × 100 tight | 200 | 200 | 7 | 8 |
+
+800/800 games won. The bisection gives `O(log W + log H)` turns, i.e. at most
+`2 × 14 = 28` jumps on the largest building.
 
 Each step is its own commit, so the history shows how the algorithm grew.
 

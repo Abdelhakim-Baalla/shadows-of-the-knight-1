@@ -26,4 +26,9 @@ while (true) {
     } else if (bombDir.includes('R')) {
         minX = X0 + 1;
     }
+
+    X0 = Math.floor((minX + maxX) / 2);
+    Y0 = Math.floor((minY + maxY) / 2);
+
+    console.log(X0 + ' ' + Y0);
 }
