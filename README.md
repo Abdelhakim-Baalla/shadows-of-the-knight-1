@@ -1,5 +1,7 @@
 # Shadows of the Knight — Episode 1
 
+[Simulateur du puzzle](https://github.com/Abdelhakim-Baalla/shadows-of-the-knight-1/blob/master/sim.js)
+
 [![Node.js](https://img.shields.io/badge/Node.js-%E2%89%A514-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Status](https://img.shields.io/badge/status-in%20progress-orange)]()
